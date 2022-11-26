@@ -84,13 +84,20 @@ header {
     padding: 1rem 1.5rem;
 }
 
+.mobile-menu{
+    display: none;
+}
+
 a{
+    display: inline-block;
     text-decoration: none;
     color: var(--color-primary);
+    transition: .3s ease;
 }
 
 a:hover{
     border-bottom: 1px solid var(--color-primary);
+    transition: .3s ease;
 }
 
 a:visited{
@@ -173,11 +180,13 @@ ol{
 
 .form-group input:focus{
     outline-color: var(--color-primary);
+    outline-width: 1px;
     transition: .3s ease;
 }
 
 .form-group textarea:focus{
     outline-color: var(--color-primary);
+    outline-width: 1px;
     transition: .3s ease;
 }
 
@@ -206,4 +215,27 @@ form button:active{
     box-shadow: inset 7px 7px 14px #d4b4b5,
     inset -7px -7px 14px #fffeff;
     transition: .3s ease;
+}
+
+/* .dropdown{
+    display: none;
+} */
+
+.drop a:hover{
+    background-color: aliceblue;
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-nav__list {
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
+
+    .btn {
+        width: 3rem;
+        height: 3rem;
+    }
 }
