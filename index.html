@@ -14,19 +14,24 @@
         <ul class="header-nav__list">
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li class="drop"><a href="#">Catalog
-          </a>
+          <li class="drop">
+            <a href="#">Catalog </a>
             <ul class="dropdown">
               <li><a href="#">Prod 1</a></li>
               <li><a href="#">Prod 2</a></li>
               <li><a href="#">Prod 3</a></li>
               <li><a href="#">Prod 4</a></li>
             </ul>
-        </li>
+          </li>
           <li><a href="application">Loan Application</a></li>
         </ul>
         <div class="mobile-menu">
-          <input type="checkbox" name="toggle" id="toggle" class="hamburger-toggle">
+          <input
+            type="checkbox"
+            name="toggle"
+            id="toggle"
+            class="hamburger-toggle"
+          />
           <div class="hamburger-icon">
             <span class="lines"></span>
             <span class="lines"></span>
@@ -37,7 +42,8 @@
             <ul>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
-              <li><a href="#" onclick="toggleDropdown()" class="drop">Catalog</a>
+              <li>
+                <a href="#" onclick="toggleDropdown()" class="drop">Catalog</a>
                 <ul class="mobile-dropdown" id="mobile-catalog">
                   <li><a href="#">Prod 1</a></li>
                   <li><a href="#">Prod 2</a></li>
@@ -127,7 +133,12 @@
           <form id="form" action="" onsubmit="sendMessage()">
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="example@email.com" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@email.com"
+              />
             </div>
             <div class="form-group">
               <label for="message">Message</label>

@@ -1,388 +1,345 @@
-/* 
-- Import two fonts from google fonts. One should be a display font, one should be for the text.
-- Define 4 colors (--black, --white, --primary, --accent) in variables
-- Define the two font-families in variables (--font-display, --font-text)
-- Use font-display for all headings. Use font-text for everything else
-- Define separate font-sizes for all headings h1 to h4 (h1 should be larger than h2, etc)
-- Add font color to the nav links for all states. (regular a, :hover, :active) (use the variables)
-- Remove the list style from the navigation ul list
-- All elements with the class .card should have the primary color as background-color, and accent color as font color
-- All paragraphs in the .primary-articles should have italic text (do NOT edit the HTML to achieve this :D )
-- All paragraphs in the .secondary-articles should have a font-weight of 700 (same here, do not edit the HTML)
-- Bonus: Add styling to the contact section and form
-*/
-
-/* Note: Keep the homework task comment above when sending the homework. It helps with checking your homework. You can even use the comments
-to specify where a solution for a task is located in the document. You can delete this note. :D
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
-
-:root{
-    --font-display: 'Rubik Microbe', cursive;
-    --font-text: 'Roboto', sans-serif;
-    --color-black: #2f3640;
-    --color-white: #f5f6fa;
-    --color-primary: #89023E;
-    --color-secondary: #FFD9DA;
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
+:root {
+  --font-display: "Rubik Microbe", cursive;
+  --font-text: "Roboto", sans-serif;
+  --color-black: #2f3640;
+  --color-white: #f5f6fa;
+  --color-primary: #89023E;
+  --color-secondary: #FFD9DA;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-family: var(--font-text);
-    font-size: 62.5%;
+html {
+  font-family: var(--font-text);
+  font-size: 62.5%;
 }
 
-body{
-    font-size: 1.6rem;
+body {
+  font-size: 1.6rem;
 }
 
-h1{
-    font-family: var(--font-display);
-    font-size: 3.6rem;
-    color: var(--color-primary);
+h1 {
+  font-family: var(--font-display);
+  font-size: 3.6rem;
+  color: var(--color-primary);
 }
 
-h2{
-    font-family: var(--font-display);
-    font-size: 3.2rem;
+h2 {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
 }
 
-h3{
-    font-family: var(--font-display);
-    font-size: 2.6rem;
+h3 {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--color-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-secondary);
 }
 
-.header-brand{
-    font-size: 3.6rem;
+.header-brand {
+  font-size: 3.6rem;
 }
 
-.header-brand span{
-    color: var(--color-primary);
+.header-brand span {
+  color: var(--color-primary);
 }
 
-.header-nav__list{
-    list-style: none;
-    display: flex;
+.header-nav__list {
+  list-style: none;
+  display: flex;
 }
 
-.header-nav__list li{
-    padding: 1rem 1.5rem;
+.header-nav__list li {
+  padding: 1rem 1.5rem;
 }
 
-.mobile-menu{
-    display: none;
+.mobile-menu {
+  display: none;
 }
 
-a{
-    display: inline-block;
-    text-decoration: none;
-    color: var(--color-primary);
-    transition: .3s ease;
-    border-bottom: 1px solid transparent;
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: 0.3s ease;
+  border-bottom: 1px solid transparent;
 }
 
-a:hover{
-    border-bottom: 1px solid var(--color-primary);
-    transition: .3s ease;
+a:hover {
+  border-bottom: 1px solid var(--color-primary);
+  transition: 0.3s ease;
 }
 
 /* a:visited{
     color: var(--color-black);
 } */
-
-main{
-    padding: 1rem 3rem;
+main {
+  padding: 1rem 3rem;
 }
 
-.card{
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    margin: 2rem 1rem;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+.card {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  margin: 2rem 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-ol{
-    padding: 0 2rem;
+ol {
+  padding: 0 2rem;
 }
 
-.primary-card p{
-    font-style: italic;
+.primary-card p {
+  font-style: italic;
 }
 
-.secondary-card p{
-    font-weight: 700;
+.secondary-card p {
+  font-weight: 700;
 }
 
-.contact{
-    display: flex;
-    justify-content: start;
-    margin: 0 2rem;
+.contact {
+  display: flex;
+  justify-content: start;
+  margin: 0 2rem;
 }
 
-.contact form{
-    padding: 1rem 1rem;
-    background-color: var(--color-secondary);
-    border-radius: 10px;
+.contact form {
+  padding: 1rem 1rem;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
 }
 
-.form-group{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
-    flex-wrap: wrap;
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  flex-wrap: wrap;
 }
 
-.form-group label{
-    padding: 0 1rem;
-    margin-bottom: 1rem;
+.form-group label {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
 }
 
-.form-group input{
-    height: 3rem;
-    padding: 1rem;
-    border-radius: 5px;
-    border: none;
-    transition: .3s ease;
+.form-group input {
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  transition: 0.3s ease;
 }
 
-.form-group textarea{
-    border-radius: 5px;
-    border: none;
-    resize: none;
-    transition: .3s ease;
-    padding: 1rem;
-    font-family: var(--font-text);
+.form-group textarea {
+  border-radius: 5px;
+  border: none;
+  resize: none;
+  transition: 0.3s ease;
+  padding: 1rem;
+  font-family: var(--font-text);
 }
 
-.form-group input:hover{
-    box-shadow: 0 0 5px var(--color-primary) inset;
-    transition: .3s ease;
+.form-group input:hover {
+  box-shadow: 0 0 5px var(--color-primary) inset;
+  transition: 0.3s ease;
 }
 
-.form-group textarea:hover{
-    box-shadow: 0 0 5px var(--color-primary) inset;
-    transition: .3s ease;
+.form-group textarea:hover {
+  box-shadow: 0 0 5px var(--color-primary) inset;
+  transition: 0.3s ease;
 }
 
-.form-group input:focus{
-    outline-color: var(--color-primary);
-    outline-width: 1px;
-    transition: .3s ease;
+.form-group input:focus {
+  outline-color: var(--color-primary);
+  outline-width: 1px;
+  transition: 0.3s ease;
 }
 
-.form-group textarea:focus{
-    outline-color: var(--color-primary);
-    outline-width: 1px;
-    transition: .3s ease;
+.form-group textarea:focus {
+  outline-color: var(--color-primary);
+  outline-width: 1px;
+  transition: 0.3s ease;
 }
 
-form button{
-    height: 30px;
-    width: 70px;
-    border: none;
-    border-radius: 20px;
-    background: linear-gradient(145deg, #ffe8e9, #e6c3c4);
-    box-shadow:  7px 7px 14px #d4b4b5,
-             -7px -7px 14px #fffeff;
-    transition: .3s ease;
+form button {
+  height: 30px;
+  width: 70px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffe8e9, #e6c3c4);
+  box-shadow: 7px 7px 14px #d4b4b5, -7px -7px 14px #fffeff;
+  transition: 0.3s ease;
 }
 
-form button:hover{
-    border-radius: 20px;
-    background: var(--color-secondary);
-    box-shadow:  7px 7px 14px #d4b4b5,
-    -7px -7px 14px #fffeff;
-    transition: .3s ease;
+form button:hover {
+  border-radius: 20px;
+  background: var(--color-secondary);
+  box-shadow: 7px 7px 14px #d4b4b5, -7px -7px 14px #fffeff;
+  transition: 0.3s ease;
 }
 
-form button:active{
-    border-radius: 20px;
-    background: var(--color-secondary);
-    box-shadow: inset 7px 7px 14px #d4b4b5,
-    inset -7px -7px 14px #fffeff;
-    transition: .3s ease;
+form button:active {
+  border-radius: 20px;
+  background: var(--color-secondary);
+  box-shadow: inset 7px 7px 14px #d4b4b5, inset -7px -7px 14px #fffeff;
+  transition: 0.3s ease;
 }
 
-.dropdown{
-    display: none;
-    list-style: none;
-    background-color: var(--color-secondary);
-    position: absolute;
-    width: 15rem;
-    top: 3rem;
-    left: 0;
+.dropdown {
+  display: none;
+  list-style: none;
+  background-color: var(--color-secondary);
+  position: absolute;
+  width: 15rem;
+  top: 3rem;
+  left: 0;
 }
 
 .drop {
-    position: relative;
+  position: relative;
 }
 
-.drop:hover .dropdown{
-    display: block;
+.drop:hover .dropdown {
+  display: block;
 }
 
-.mobile-items{
-    display: none;
+.mobile-items {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
-
-    main{
-        padding: 1rem;
-    }
-
-    .header-nav__list {
-        display: none;
-    }
-    .mobile-menu{
-        display: block;
-    }
-
-    .contact form{
-        width: 100%;
-    }
-
-    .contact form input{
-        width: 100%;
-    }
-
-    .contact form textarea{
-        width: 100%;
-    }
-
-    .mobile-items{
-        display: block;
-        position: absolute;
-        z-index: 2;
-        top: 62px;
-        left: 0;
-        width: 100vw;
-        background-color: var(--color-secondary);
-        opacity: 0;
-        translate: -100vw;
-        transition: all .3s ease;
-    }
-
-    .mobile-items ul{
-        list-style: none;
-    }
-
-    .mobile-items ul li a{
-        display: inline-block;
-        font-size: 2rem;
-        padding: 2rem;
-        width: 100%;
-        border: none;
-    }
-
-    .mobile-items ul li a:active{
-        background-color: var(--color-primary);
-        color: var(--color-secondary);
-    }
-
-    .hamburger-toggle{
-        height: 3.5rem;
-        width: 3.5rem;
-        position: relative;
-        opacity: 0;
-        z-index: 5;
-    }
-
-    .hamburger-icon{
-        height: 3.5rem;
-        width: 3.5rem;
-        position: absolute;
-        top: 12px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .lines{
-        display: block;
-        background-color: var(--color-black);
-        width: 3.5rem;
-        height: .5rem;
-        border-radius: 8px;
-        transition: all .3s ease;
-    }
-
-    .mobile-dropdown{
-        padding-left: 2rem;
-        display: none;
-        transition: all .3s ease;
-    }
-
-    .hamburger-toggle:checked ~ .hamburger-icon .lines{
-        background-color: var(--color-primary);
-    }
-
-    .hamburger-toggle:checked ~ .hamburger-icon :nth-child(1){
-        transform: rotate(45deg);
-        translate: 0 15px
-    }
-
-    .hamburger-toggle:checked ~ .hamburger-icon :nth-child(3){
-        transform: rotate(-45deg);
-        translate: 0 -15px
-    }
-
-    .hamburger-toggle:checked ~ .hamburger-icon :nth-child(2){
-        opacity: 0;
-    }
-
-    .hamburger-toggle:checked ~ .mobile-items{
-        opacity: 1;
-        translate: 0vw;
-    }
-
-    .darken{
-        position: absolute;
-        top: 62px;
-        background-color: black;
-        z-index: 1;
-        height: 100vh;
-        width: 100vw;
-        left: 0;
-        opacity: 0;
-        translate: -100vw;
-        transition: all .3s ease;
-    }
-
-    .hamburger-toggle:checked ~ .darken{
-        opacity: .6;
-        translate: 0;
-        backdrop-filter: blur(20px);
-    }
-
-    .contact{
-        margin-left: 1rem;
-    }
-    .contact form{
-        display: flex;
-        flex-direction: column;
-    }
-    .form-group {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
+  main {
+    padding: 1rem;
+  }
+  .header-nav__list {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .contact form {
+    width: 100%;
+  }
+  .contact form input {
+    width: 100%;
+  }
+  .contact form textarea {
+    width: 100%;
+  }
+  .mobile-items {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 62px;
+    left: 0;
+    width: 100vw;
+    background-color: var(--color-secondary);
+    opacity: 0;
+    translate: -100vw;
+    transition: all 0.3s ease;
+  }
+  .mobile-items ul {
+    list-style: none;
+  }
+  .mobile-items ul li a {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 2rem;
+    width: 100%;
+    border: none;
+  }
+  .mobile-items ul li a:active {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+  }
+  .hamburger-toggle {
+    height: 3.5rem;
+    width: 3.5rem;
+    position: relative;
+    opacity: 0;
+    z-index: 5;
+  }
+  .hamburger-icon {
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .lines {
+    display: block;
+    background-color: var(--color-black);
+    width: 3.5rem;
+    height: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  .mobile-dropdown {
+    padding-left: 2rem;
+    display: none;
+    transition: all 0.3s ease;
+  }
+  .hamburger-toggle:checked ~ .hamburger-icon .lines {
+    background-color: var(--color-primary);
+  }
+  .hamburger-toggle:checked ~ .hamburger-icon :nth-child(1) {
+    transform: rotate(45deg);
+    translate: 0 15px;
+  }
+  .hamburger-toggle:checked ~ .hamburger-icon :nth-child(3) {
+    transform: rotate(-45deg);
+    translate: 0 -15px;
+  }
+  .hamburger-toggle:checked ~ .hamburger-icon :nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-toggle:checked ~ .mobile-items {
+    opacity: 1;
+    translate: 0vw;
+  }
+  .darken {
+    position: absolute;
+    top: 62px;
+    background-color: black;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    opacity: 0;
+    translate: -100vw;
+    transition: all 0.3s ease;
+  }
+  .hamburger-toggle:checked ~ .darken {
+    opacity: 0.6;
+    translate: 0;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  .contact {
+    margin-left: 1rem;
+  }
+  .contact form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}/*# sourceMappingURL=main.css.map */
